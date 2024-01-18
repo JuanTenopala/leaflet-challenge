@@ -50,13 +50,12 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
     let legend = L.control({position: "bottomright"});
     legend.onAdd = function (){
         let div = L.DomUtil.create("div", "info legend");
-        let depthLevels = [-10, 10, 30, 50];
         div.innerHTML = "<table>" +
-        "<tr> <th style='text-align:center; font-size:200%; color:black;'> Depth </th> </tr>" +
-        "<tr> <th style='text-align:center; font-size:200%; color:black; background-color:#00ff00;'> 0 - 10 </th> </tr>"+
-        "<tr> <th style='text-align:center; font-size:200%; color:black; background-color:#ffff00;'> 10 - 30 </th> </tr>"+
-        "<tr> <th style='text-align:center; font-size:200%; color:black; background-color:#ffa500;'> 30 - 50 </th> </tr>"+
-        "<tr> <th style='text-align:center; font-size:200%; color:black; background-color:#ff0000;'> 50 + </th> </tr>"+
+        "<tr> <th style='text-align:center; font-size:100%; color:black;'> Earthquake depth </th> </tr>" +
+        "<tr> <th style='text-align:center; font-size:100%; color:black; background-color:#00ff00;'> 0 - 10 </th> </tr>"+
+        "<tr> <th style='text-align:center; font-size:100%; color:black; background-color:#ffff00;'> 10 - 30 </th> </tr>"+
+        "<tr> <th style='text-align:center; font-size:100%; color:black; background-color:#ffa500;'> 30 - 50 </th> </tr>"+
+        "<tr> <th style='text-align:center; font-size:100%; color:black; background-color:#ff0000;'> 50 + </th> </tr>"+
         "</table>";
 
         return div;
